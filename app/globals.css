@@ -319,3 +319,10 @@ filter:none!important;
 
 /* Header scrolls naturally with the page instead of staying fixed. */
 .header,.header.scrolled{position:absolute!important;top:0!important;left:0!important;right:0!important;background:transparent!important;backdrop-filter:none!important}
+
+/* Contact section uses the same midnight-black and golden-yellow palette as hero. */
+.contact{background:radial-gradient(ellipse 65% 75% at 78% 76%,#3b2b0d 0%,#17140d 43%,#08090b 85%)!important;color:#f5f3ef!important}
+.contact h2,.contact h2 span{color:#f5f3ef}
+.contact h2 em,.contact .gold,.contact .kicker{color:#ffc900!important}
+.contact .primary{background:#ffc900!important;color:#08090b!important}
+.contact .secondary{border-color:#f5f3ef!important;color:#f5f3ef!important}
