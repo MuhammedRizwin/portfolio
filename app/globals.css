@@ -175,3 +175,36 @@ padding:clamp(66px,10vh,100px) 4.8% clamp(12px,3vh,28px)!important;
 .hero.hero-portrait-blended .portrait{height:109%!important;bottom:-14%!important}
 .hero.hero-portrait-blended .metrics{margin-top:17px!important}
 }
+
+/* Reference halo: left-shifted behind portrait, only upper semicircle visible.
+   Portrait is not modified. */
+@media(min-width:1100px){
+.hero.hero-portrait-blended .halo{
+right:15%!important;
+top:17%!important;
+width:min(48vw,82vh)!important;
+height:min(48vw,82vh)!important;
+border:3px solid #ffbd13!important;
+border-radius:50%!important;
+background:transparent!important;
+box-shadow:0 0 5px 1px #fff0b9,0 0 18px 4px #ffb100c7,0 0 48px 12px #ff5a0069!important;
+-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 46%,#0008 56%,transparent 64%)!important;
+mask-image:linear-gradient(to bottom,#000 0%,#000 46%,#0008 56%,transparent 64%)!important;
+animation:none!important;
+}
+}
+@media(min-width:801px) and (max-width:1099px){
+.hero.hero-portrait-blended .halo{
+right:11%!important;top:22%!important;width:58vw!important;height:58vw!important;
+-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 48%,transparent 65%)!important;
+mask-image:linear-gradient(to bottom,#000 0%,#000 48%,transparent 65%)!important;
+}
+}
+@media(max-width:800px){
+.hero.hero-portrait-blended .halo{
+right:0!important;bottom:8%!important;top:auto!important;width:95vw!important;height:95vw!important;
+-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 48%,transparent 65%)!important;
+mask-image:linear-gradient(to bottom,#000 0%,#000 48%,transparent 65%)!important;
+animation:none!important;
+}
+}
