@@ -316,3 +316,6 @@ filter:none!important;
 
 /* Latest approved portrait upload */
 .hero.hero-portrait-blended .portrait{background-image:url("/Hero%20Page%20Pic.png")!important}
+
+/* Header scrolls naturally with the page instead of staying fixed. */
+.header,.header.scrolled{position:absolute!important;top:0!important;left:0!important;right:0!important;background:transparent!important;backdrop-filter:none!important}
