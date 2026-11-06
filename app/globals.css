@@ -307,3 +307,6 @@ filter:none!important;
 .expertise .skill{padding:24px 16px!important}
 .expertise .skill h3{font-size:19px!important}
 }
+
+/* Requested: remove the decorative halo/ring from hero only. */
+.hero .halo,.hero.hero-portrait-blended .halo{display:none!important}
