@@ -77,3 +77,8 @@ body:has(.hero-exact-reference) .header .logo,body:has(.hero-exact-reference) .h
 .hero.hero-portrait-blended .portrait{background-image:url("/Hero%20Page%20Pic.png")!important;background-size:contain!important;background-repeat:no-repeat!important;background-position:center bottom!important;clip-path:none!important;-webkit-mask-image:none!important;mask-image:none!important;right:0;bottom:0;width:56%;height:94%;opacity:1!important}
 .hero.hero-portrait-blended .halo{z-index:1!important}
 @media(max-width:800px){.hero.hero-portrait-blended .portrait{right:-13%;width:100%;height:55%;bottom:0}}
+
+/* Align original portrait with golden ring: centered and slightly lower */
+.hero.hero-portrait-blended .portrait{right:3.5%!important;bottom:-5%!important;width:56%!important;height:94%!important;background-position:center bottom!important}
+@media(max-width:1050px){.hero.hero-portrait-blended .portrait{right:-3%!important;bottom:-4%!important;width:66%!important}}
+@media(max-width:800px){.hero.hero-portrait-blended .portrait{right:-8%!important;bottom:-3%!important;width:100%!important;height:55%!important}}
