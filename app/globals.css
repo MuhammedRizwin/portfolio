@@ -153,3 +153,25 @@ padding:clamp(66px,10vh,100px) 4.8% clamp(12px,3vh,28px)!important;
 .section h2{font-size:clamp(42px,9vw,64px)!important}
 .contact{min-height:0!important}
 }
+
+/* Match approved second reference: larger foreground portrait, ring centered behind,
+   tighter headline stack, darker left side, no changes to original image pixels. */
+@media(min-width:1100px){
+.hero.hero-original-photo.hero-portrait-blended{background:radial-gradient(ellipse 65% 88% at 74% 40%,#b60802 0%,#6f0502 36%,#290303 68%,#100203 100%)!important}
+.hero.hero-portrait-blended .hero-shade{background:linear-gradient(90deg,#120202f5 0%,#170203d9 28%,#18020244 50%,transparent 68%)!important}
+.hero.hero-portrait-blended .hero-content{padding:clamp(72px,10vh,105px) 5.5% 18px!important}
+.hero.hero-portrait-blended h1{font-size:clamp(62px,min(5.8vw,11vh),104px)!important;line-height:.96!important;max-width:54%!important}
+.hero.hero-portrait-blended .eyebrow{font-size:clamp(15px,1.25vw,20px)!important}
+.hero.hero-portrait-blended .rule{margin:clamp(14px,2.5vh,24px) 0!important}
+.hero.hero-portrait-blended .subtitle{font-size:clamp(12px,1.13vw,17px)!important;margin:clamp(17px,2.7vh,28px) 0!important}
+.hero.hero-portrait-blended .btn{padding:clamp(12px,1.8vh,17px) 27px!important}
+.hero.hero-portrait-blended .metrics{margin-top:clamp(22px,4vh,40px)!important}
+.hero.hero-portrait-blended .metrics strong{font-size:clamp(27px,2.5vw,38px)!important}
+.hero.hero-portrait-blended .portrait{right:0%!important;bottom:-13%!important;width:64%!important;height:112%!important;background-size:contain!important;background-position:center bottom!important}
+.hero.hero-portrait-blended .halo{right:9%!important;top:23%!important;width:min(45vw,78vh)!important;height:min(45vw,78vh)!important;border:3px solid #ffb400!important;box-shadow:0 0 6px 2px #ffe67e,0 0 25px 7px #ff9b00a6,0 0 70px 18px #ff62005e!important}
+}
+@media(min-width:1100px) and (max-height:750px){
+.hero.hero-portrait-blended h1{font-size:clamp(55px,9.4vh,78px)!important}
+.hero.hero-portrait-blended .portrait{height:109%!important;bottom:-14%!important}
+.hero.hero-portrait-blended .metrics{margin-top:17px!important}
+}
