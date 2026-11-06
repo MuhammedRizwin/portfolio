@@ -236,3 +236,44 @@ animation:none!important;
 
 /* Golden separators in the hero tagline */
 .hero .subtitle b{color:#ffc900!important;-webkit-text-fill-color:#ffc900!important}
+
+/* Black & gold art direction based on approved new visual reference.
+   Keep original user-uploaded portrait PNG, never generate or replace a face. */
+:root{--gold:#ffc900;--ink:#08090b;--white:#f5f3ef}
+.hero.hero-original-photo.hero-portrait-blended{
+background:radial-gradient(ellipse 47% 65% at 78% 49%,#46300b 0%,#1b150a 43%,#08090b 85%)!important;
+}
+.hero.hero-portrait-blended .glow{
+background:radial-gradient(ellipse 43% 62% at 79% 43%,#ffc90024,transparent 77%),
+radial-gradient(ellipse 24% 22% at 0% 100%,#ffc90018,transparent 100%)!important;
+}
+.hero.hero-portrait-blended .hero-shade{
+background:linear-gradient(90deg,#08090bf7 0%,#08090bdc 24%,#08090b6e 43%,transparent 65%)!important;
+}
+.hero.hero-portrait-blended .halo{
+border:3px solid #ffc900!important;
+box-shadow:0 0 6px 2px #fff0a2,0 0 25px 6px #ffc900b0,0 0 68px 18px #ffc90052!important;
+}
+.hero.hero-portrait-blended .rule{background:#f5f3ef!important}
+.hero.hero-portrait-blended .subtitle{color:#f5f3ef!important}
+.hero.hero-portrait-blended .subtitle b{color:#ffc900!important;-webkit-text-fill-color:#ffc900!important}
+.hero.hero-portrait-blended .primary{background:#ffc900!important;color:#08090b!important}
+.hero.hero-portrait-blended .secondary{border-color:#f5f3ef!important;color:#f5f3ef!important}
+.hero.hero-portrait-blended .metrics strong{color:#ffc900!important}
+.hero.hero-portrait-blended h1{color:#f5f3ef!important}
+.hero.hero-portrait-blended h1 em{color:#ffc900!important}
+.hero.hero-portrait-blended .portrait{
+background-image:url("/Hero%20Page%20Pic.png")!important;
+filter:none!important;
+}
+/* Bring the title into the bold, wide composition of the reference. */
+@media(min-width:1100px){
+.hero.hero-portrait-blended .hero-content{padding-left:5.6%!important}
+.hero.hero-portrait-blended h1{font-weight:700!important;letter-spacing:-.075em!important;font-size:clamp(68px,min(6.7vw,11.8vh),116px)!important;line-height:.92!important}
+.hero.hero-portrait-blended .halo{right:8%!important;top:21%!important}
+.hero.hero-portrait-blended .portrait{right:0!important;bottom:-13%!important}
+}
+@media(max-width:800px){
+.hero.hero-original-photo.hero-portrait-blended{background:radial-gradient(ellipse at 75% 78%,#3c2b0d,#08090b 65%)!important}
+.hero.hero-portrait-blended .hero-shade{background:linear-gradient(180deg,#08090bf0 0%,#08090bb0 45%,transparent 80%)!important}
+}
