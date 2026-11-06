@@ -208,3 +208,17 @@ mask-image:linear-gradient(to bottom,#000 0%,#000 48%,transparent 65%)!important
 animation:none!important;
 }
 }
+
+/* Larger hero H1 while preserving the approved portrait and ring placement */
+@media(min-width:1100px){
+.hero.hero-portrait-blended h1{font-size:clamp(68px,min(6.5vw,12vh),116px)!important;line-height:.94!important;letter-spacing:-.065em!important}
+}
+@media(min-width:801px) and (max-width:1099px){
+.hero.hero-portrait-blended h1{font-size:clamp(58px,7vw,88px)!important;line-height:.96!important}
+}
+@media(max-width:800px){
+.hero.hero-portrait-blended h1{font-size:clamp(47px,10.3vw,75px)!important;line-height:.97!important}
+}
+@media(min-width:1100px) and (max-height:700px){
+.hero.hero-portrait-blended h1{font-size:clamp(54px,10.2vh,84px)!important}
+}
