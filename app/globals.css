@@ -87,3 +87,20 @@ body:has(.hero-exact-reference) .header .logo,body:has(.hero-exact-reference) .h
 .hero.hero-portrait-blended .portrait{bottom:-8%!important}
 @media(max-width:1050px){.hero.hero-portrait-blended .portrait{bottom:-7%!important}}
 @media(max-width:800px){.hero.hero-portrait-blended .portrait{bottom:-6%!important}}
+
+/* Reference alignment: head above halo, shoulders crossing its rim, hands low.
+   Bright upper ring with warm amber bloom and subtler lower arc. */
+.hero.hero-portrait-blended .portrait{right:3.5%!important;bottom:-5.5%!important;width:56%!important;height:94%!important;background-position:center bottom!important}
+.hero.hero-portrait-blended .halo{
+right:5.5%!important;top:18%!important;
+width:min(47vw,730px)!important;height:min(47vw,730px)!important;
+border:3px solid #ffb800!important;
+border-radius:50%!important;
+background:transparent!important;
+box-shadow:0 0 5px 2px #ffe36c,0 0 20px 5px #ff9a00a6,0 0 52px 12px #ff620066,0 0 95px 25px #ff440026,inset 0 0 20px #ff8d0038!important;
+opacity:1!important;
+-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 46%,#0009 75%,transparent 100%)!important;
+mask-image:linear-gradient(to bottom,#000 0%,#000 46%,#0009 75%,transparent 100%)!important;
+}
+@media(max-width:1050px){.hero.hero-portrait-blended .portrait{right:-3%!important;bottom:-5%!important;width:66%!important}.hero.hero-portrait-blended .halo{right:0!important;top:25%!important;width:53vw!important;height:53vw!important}}
+@media(max-width:800px){.hero.hero-portrait-blended .portrait{right:-8%!important;bottom:-4%!important;width:100%!important;height:55%!important}.hero.hero-portrait-blended .halo{right:-7%!important;top:auto!important;bottom:10%!important;width:83vw!important;height:83vw!important}}
