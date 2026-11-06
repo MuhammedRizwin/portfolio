@@ -277,3 +277,18 @@ filter:none!important;
 .hero.hero-original-photo.hero-portrait-blended{background:radial-gradient(ellipse at 75% 78%,#3c2b0d,#08090b 65%)!important}
 .hero.hero-portrait-blended .hero-shade{background:linear-gradient(180deg,#08090bf0 0%,#08090bb0 45%,transparent 80%)!important}
 }
+
+/* Compact expertise section: reduce vertical footprint without changing content */
+@media(min-width:801px){
+.expertise.section{padding-top:clamp(38px,5vh,60px)!important;padding-bottom:clamp(38px,5vh,60px)!important}
+.expertise .expertise-head{margin:clamp(20px,3vh,36px) 0 clamp(22px,3vh,38px)!important}
+.expertise .expertise-head h2{font-size:clamp(44px,4.5vw,70px)!important;margin:12px 0!important}
+.expertise .skill{padding:clamp(16px,2.5vh,24px) 20px!important;min-height:90px}
+.expertise .skill h3{font-size:clamp(17px,1.65vw,23px)!important;margin:0!important}
+}
+@media(max-width:800px){
+.expertise.section{padding-top:48px!important;padding-bottom:48px!important}
+.expertise .expertise-head{margin:25px 0!important}
+.expertise .skill{padding:20px 14px!important}
+.expertise .skill h3{font-size:18px!important;margin:0!important}
+}
