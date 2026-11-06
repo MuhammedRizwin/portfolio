@@ -310,3 +310,6 @@ filter:none!important;
 
 /* Requested: remove the decorative halo/ring from hero only. */
 .hero .halo,.hero.hero-portrait-blended .halo{display:none!important}
+
+/* Use newly uploaded GitHub portrait asset, preserving original pixels. */
+.hero.hero-portrait-blended .portrait{background-image:url("/Neon%20Halo%20Hoodie%20Portrait.png")!important}
