@@ -313,3 +313,6 @@ filter:none!important;
 
 /* Use newly uploaded GitHub portrait asset, preserving original pixels. */
 .hero.hero-portrait-blended .portrait{background-image:url("/Neon%20Halo%20Hoodie%20Portrait.png")!important}
+
+/* Latest approved portrait upload */
+.hero.hero-portrait-blended .portrait{background-image:url("/Hero%20Page%20Pic.png")!important}
