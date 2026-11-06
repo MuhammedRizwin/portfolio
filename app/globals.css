@@ -60,3 +60,14 @@ body:has(.hero-exact-reference) .header .logo,body:has(.hero-exact-reference) .h
 @keyframes referenceReveal{from{opacity:0;filter:brightness(.8)}to{opacity:1;filter:brightness(1)}}
 @media(max-width:1099px){.hero.hero-exact-reference .reference-hotspots{display:none}}
 @media(prefers-reduced-motion:reduce){.hero.hero-exact-reference{animation:none}.hero.hero-exact-reference .reference-hotspots a{transition:none}}
+
+/* Website-only background blending: original pixels remain untouched.
+   Soft mask conceals photo's rectangular backdrop without generating a replacement face. */
+.hero.hero-portrait-blended{background:radial-gradient(ellipse 75% 82% at 74% 43%,#a30905 0%,#680500 35%,#290303 69%,#0e0304 100%)!important}
+.hero.hero-portrait-blended .portrait{background-image:url("/Hero%20Page%20Pic.webp")!important;background-size:contain!important;background-position:center bottom!important;right:1%;bottom:-1%;width:56%;height:96%;filter:none!important;opacity:1!important;mix-blend-mode:normal;clip-path:ellipse(49% 65% at 51% 55%);-webkit-mask-image:radial-gradient(ellipse 49% 65% at 51% 56%,#000 65%,transparent 99%);mask-image:radial-gradient(ellipse 49% 65% at 51% 56%,#000 65%,transparent 99%);animation:portraitArrive 1.3s cubic-bezier(.2,.7,.2,1) both}
+.hero.hero-portrait-blended .halo{z-index:1!important;box-shadow:0 0 12px #ffb400,0 0 40px #ff62006b!important}
+.hero.hero-portrait-blended .hero-content{z-index:4!important}
+.hero.hero-portrait-blended .reference-hotspots{display:none}
+@keyframes portraitArrive{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:800px){.hero.hero-portrait-blended .portrait{width:98%;height:57%;right:-15%;bottom:0;clip-path:ellipse(50% 66% at 50% 55%)}}
+@media(prefers-reduced-motion:reduce){.hero.hero-portrait-blended .portrait{animation:none}}
