@@ -87,3 +87,12 @@
 .hero.hero-reference-ready .hero-content .actions .btn:focus-visible{opacity:1;outline:3px solid #ffcc00}
 .hero.hero-reference-ready .header{z-index:12}
 }
+
+/* Approved uploaded artwork: preserve its original colours and proportions */
+@media(min-width:1100px){
+.hero.hero-reference-ready{background-image:url("/HP%20H.png");background-position:center center;background-size:100% 100%;background-repeat:no-repeat}
+.hero.hero-reference-ready .hero-content{opacity:0;pointer-events:none}
+.hero.hero-reference-ready .hero-content .actions{pointer-events:auto}
+.hero.hero-reference-ready .header{opacity:0;pointer-events:none}
+.hero.hero-reference-ready .header a,.hero.hero-reference-ready .header button{pointer-events:auto}
+}
