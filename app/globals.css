@@ -82,3 +82,8 @@ body:has(.hero-exact-reference) .header .logo,body:has(.hero-exact-reference) .h
 .hero.hero-portrait-blended .portrait{right:3.5%!important;bottom:-5%!important;width:56%!important;height:94%!important;background-position:center bottom!important}
 @media(max-width:1050px){.hero.hero-portrait-blended .portrait{right:-3%!important;bottom:-4%!important;width:66%!important}}
 @media(max-width:800px){.hero.hero-portrait-blended .portrait{right:-8%!important;bottom:-3%!important;width:100%!important;height:55%!important}}
+
+/* Fine-tune: lower portrait without shifting the ring or hero content */
+.hero.hero-portrait-blended .portrait{bottom:-8%!important}
+@media(max-width:1050px){.hero.hero-portrait-blended .portrait{bottom:-7%!important}}
+@media(max-width:800px){.hero.hero-portrait-blended .portrait{bottom:-6%!important}}
