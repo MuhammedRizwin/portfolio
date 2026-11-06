@@ -14,3 +14,38 @@
 /* Transparent navigation, including when scrolling */
 .header,.header.scrolled{background:transparent!important;backdrop-filter:none!important;border-bottom:0!important;box-shadow:none!important}
 @media(max-width:800px){.nav.open{background:rgba(8,9,11,.94);backdrop-filter:blur(18px)}}
+
+/* Approved second reference — hero composition */
+.hero{height:100svh;min-height:760px;max-height:none;align-items:center;background:radial-gradient(ellipse at 74% 48%,#b00000 0%,#6b0000 26%,#230000 56%,#080607 85%);isolation:isolate}
+.hero .glow{inset:0;width:100%;height:100%;background:radial-gradient(ellipse at 75% 54%,#e70a0044,transparent 58%);z-index:-1}
+.hero .portrait{right:2%;bottom:-2%;width:54%;height:92%;z-index:2;background-image:url("/Hero%20Page%20Pic.webp");background-size:cover;background-position:center 38%;-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 16%,#000 96%,transparent 100%);mask-image:linear-gradient(to right,transparent 0%,#000 16%,#000 96%,transparent 100%);filter:none;opacity:1}
+.hero .halo{z-index:1;right:7%;top:27%;width:min(46vw,780px);height:min(46vw,780px);border:3px solid #ffb600;border-radius:50%;box-shadow:0 0 15px #ffb000b0,0 0 38px #ff850044,inset 0 0 10px #ffb00070;opacity:1;animation:referenceHalo 9s ease-in-out infinite}
+.hero .hero-shade{z-index:0;background:linear-gradient(90deg,#0b0507 0%,#140506e6 28%,transparent 60%);pointer-events:none}
+.hero .hero-content{z-index:4;padding:110px 5.5% 40px;width:100%;max-width:none}
+.hero .eyebrow{font-size:clamp(13px,1.3vw,20px);letter-spacing:.28em;font-weight:500;line-height:1.4}
+.hero .rule{background:#f5f3ef;width:75px;height:4px;margin:25px 0}
+.hero h1{font-size:clamp(58px,5.6vw,100px);line-height:.99;letter-spacing:-.055em;max-width:48vw}
+.hero .subtitle{font-size:clamp(12px,1.1vw,17px);text-transform:uppercase;letter-spacing:.18em;line-height:1.55;margin:25px 0 32px}
+.hero .subtitle b{color:#f5f3ef;margin:0 6px}
+.hero .btn{border-radius:100px;padding:15px 26px;font-size:13px}
+.hero .primary{background:#ffcc00}
+.hero .secondary{border:2px solid #f5f3ef}
+.hero .metrics{gap:0;margin-top:40px;max-width:600px}
+.hero .metrics>div{padding:0 25px;border-right:1px solid #f5f3ef8c;gap:6px}
+.hero .metrics>div:first-child{padding-left:0}
+.hero .metrics>div:last-child{border-right:0}
+.hero .metrics strong{color:#ffcc00;font-size:clamp(24px,2.2vw,36px);line-height:1}
+.hero .metrics span{font-size:11px;line-height:1.4;color:#f5f3ef;font-weight:700;letter-spacing:.08em}
+.hero .scroll{display:none}
+.header,.header.scrolled{height:90px;padding:0 5%;background:transparent!important;border:0!important;backdrop-filter:none!important}
+.header:after{content:"";position:absolute;bottom:0;left:5%;right:5%;height:2px;background:#f5f3efb0}
+.header .brand-logo{width:150px;max-height:66px;object-fit:contain}
+.header .nav{margin-left:auto;margin-right:5%;gap:clamp(20px,3.2vw,60px)}
+.header .nav a{text-transform:uppercase;font-size:15px;font-weight:700;color:#f5f3ef}
+.header .nav a:first-child{color:#ffcc00;border-bottom:3px solid #ffcc00;padding-bottom:8px}
+.header .header-cta{border:2px solid #f5f3ef}
+@keyframes referenceHalo{50%{filter:brightness(1.1)}}
+@media(max-width:1050px){.hero h1{font-size:clamp(52px,6vw,76px)}.hero .portrait{right:-4%;width:60%;height:82%}.hero .halo{right:1%;top:28%;width:55vw;height:55vw}.hero .metrics{max-width:520px}.hero .metrics>div{padding:0 14px}}
+@media(max-width:800px){.header,.header.scrolled{height:74px}.header:after{left:5%;right:5%}.header .brand-logo{width:112px}.header .nav{margin:0;gap:22px}.header .nav a{font-size:14px}.hero{height:auto;min-height:920px;align-items:flex-start}.hero .hero-content{padding:140px 5% 40px}.hero h1{max-width:100%;font-size:clamp(50px,10vw,75px)}.hero .portrait{right:-15%;bottom:0;width:90%;height:54%;opacity:.8;background-position:center 30%}.hero .halo{top:auto;bottom:12%;right:-10%;width:80vw;height:80vw}.hero .hero-shade{background:linear-gradient(180deg,#10060799 0%,#100607ee 45%,transparent 78%)}.hero .subtitle{max-width:500px}.hero .metrics{max-width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 0;margin-top:32px}.hero .metrics>div{padding:0 12px;border-right:0;border-left:1px solid #ffffff70}.hero .metrics>div:first-child{padding-left:12px}.hero .metrics strong{font-size:26px}.hero .metrics span{font-size:10px}.header .nav.open{top:74px;background:#08090bf5}}
+@media(max-width:480px){.hero{min-height:860px}.hero h1{font-size:clamp(42px,11vw,58px)}.hero .subtitle{font-size:11px;letter-spacing:.1em}.hero .actions{gap:9px;flex-wrap:wrap}.hero .btn{padding:13px 17px;font-size:10px}.hero .portrait{height:48%;right:-20%;width:100%}.hero .halo{bottom:10%;right:-14%;width:90vw;height:90vw}.hero .hero-content{padding-top:120px}.hero .metrics{max-width:330px}}
+@media(prefers-reduced-motion:reduce){.hero .halo{animation:none}}
