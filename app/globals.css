@@ -38,3 +38,25 @@
 @media(max-width:800px){.header,.header.scrolled{height:74px;padding:0 5%}.header:after{left:5%;right:5%}.header .brand-logo{width:110px}.header .header-cta{display:none}.header .mobile-menu{display:block;margin-left:auto}.header .nav{display:none;position:absolute;top:74px;left:0;right:0;margin:0;background:#110608ed;padding:25px;flex-direction:column;align-items:flex-start}.header .nav.open{display:flex}.hero.hero-original-photo{min-height:980px;height:auto;align-items:flex-start}.hero.hero-original-photo .hero-content{padding:145px 5% 60px}.hero.hero-original-photo h1{max-width:100%;font-size:clamp(48px,10vw,78px)}.hero.hero-original-photo .hero-shade{background:linear-gradient(180deg,#150202bb 0%,#150202aa 42%,transparent 82%)}.hero.hero-original-photo .portrait{right:-12%;bottom:0;width:94%;height:55%;opacity:.88}.hero.hero-original-photo .halo{top:auto;bottom:12%;right:-7%;width:83vw;height:83vw}.hero.hero-original-photo .metrics{display:grid;grid-template-columns:repeat(2,1fr);max-width:380px;gap:18px;margin-top:30px}.hero.hero-original-photo .metrics>div{padding:0 12px;border-left:1px solid #ffffff88;border-right:0}.hero.hero-original-photo .metrics>div:first-child{padding-left:12px}.hero.hero-original-photo .metrics strong{font-size:27px}}
 @media(max-width:440px){.hero.hero-original-photo{min-height:890px}.hero.hero-original-photo h1{font-size:clamp(42px,11vw,56px)}.hero.hero-original-photo .subtitle{font-size:11px;letter-spacing:.08em}.hero.hero-original-photo .actions{flex-wrap:wrap;gap:10px}.hero.hero-original-photo .btn{padding:13px 17px;font-size:10px}.hero.hero-original-photo .portrait{height:48%}.hero.hero-original-photo .halo{bottom:8%}}
 @media(prefers-reduced-motion:reduce){.hero.hero-original-photo .halo{animation:none}}
+
+/* Exact approved reference on desktop: no portrait reconstruction or ring redraw.
+   Use the user's uploaded HP H.png as a single, unmodified visual layer. */
+@media(min-width:1100px){
+.hero.hero-exact-reference{min-height:0;height:100svh;max-height:none;aspect-ratio:auto;background:#120002 url("/HP%20H.png") center center / 100% 100% no-repeat!important;overflow:hidden;animation:referenceReveal 1.1s ease-out both}
+.hero.hero-exact-reference .glow,.hero.hero-exact-reference .halo,.hero.hero-exact-reference .portrait,.hero.hero-exact-reference .hero-shade,.hero.hero-exact-reference .hero-content,.hero.hero-exact-reference .scroll{display:none!important}
+body:has(.hero-exact-reference) .header{background:transparent!important;border:0!important;box-shadow:none!important}
+body:has(.hero-exact-reference) .header:after{display:none!important}
+body:has(.hero-exact-reference) .header .logo,body:has(.hero-exact-reference) .header .nav,body:has(.hero-exact-reference) .header .header-cta{opacity:0}
+body:has(.hero-exact-reference) .header .logo,body:has(.hero-exact-reference) .header .nav a,body:has(.hero-exact-reference) .header .header-cta{pointer-events:auto}
+.hero.hero-exact-reference .reference-hotspots{display:block;position:absolute;inset:0;z-index:8;pointer-events:none}
+.hero.hero-exact-reference .reference-hotspots a{display:block;position:absolute;pointer-events:auto;border-radius:40px;outline-offset:4px;transition:box-shadow .3s ease,transform .3s ease}
+.hero.hero-exact-reference .reference-hotspots a:hover{box-shadow:0 0 0 3px #ffc90055,0 0 25px #ffc90044;transform:translateY(-2px)}
+.hero.hero-exact-reference .reference-hotspots a:focus-visible{outline:3px solid #fff}
+.hero.hero-exact-reference .reference-work{left:5.6%;top:68.5%;width:16.5%;height:7%}
+.hero.hero-exact-reference .reference-contact{left:23.2%;top:68.5%;width:14.5%;height:7%}
+.section{padding-left:5%;padding-right:5%}
+.section h2{font-size:clamp(48px,5.5vw,88px)}
+}
+@keyframes referenceReveal{from{opacity:0;filter:brightness(.8)}to{opacity:1;filter:brightness(1)}}
+@media(max-width:1099px){.hero.hero-exact-reference .reference-hotspots{display:none}}
+@media(prefers-reduced-motion:reduce){.hero.hero-exact-reference{animation:none}.hero.hero-exact-reference .reference-hotspots a{transition:none}}
