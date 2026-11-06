@@ -10,3 +10,7 @@
 @keyframes heroRingPulse{0%,100%{filter:brightness(1);transform:scale(1)}50%{filter:brightness(1.22);transform:scale(1.025)}}
 @media(max-width:800px){.hero .portrait{right:-20%;width:83%;height:59%;opacity:.68}.hero .halo{top:18%;right:-12%;width:68vw;height:68vw;border-width:3px;box-shadow:0 0 14px #ffc90099,0 0 50px #ffc90044}.hero .hero-content{z-index:4}}
 @media(prefers-reduced-motion:reduce){.hero .halo{animation:none}}
+
+/* Transparent navigation, including when scrolling */
+.header,.header.scrolled{background:transparent!important;backdrop-filter:none!important;border-bottom:0!important;box-shadow:none!important}
+@media(max-width:800px){.nav.open{background:rgba(8,9,11,.94);backdrop-filter:blur(18px)}}
