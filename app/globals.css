@@ -71,3 +71,9 @@ body:has(.hero-exact-reference) .header .logo,body:has(.hero-exact-reference) .h
 @keyframes portraitArrive{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:800px){.hero.hero-portrait-blended .portrait{width:98%;height:57%;right:-15%;bottom:0;clip-path:ellipse(50% 66% at 50% 55%)}}
 @media(prefers-reduced-motion:reduce){.hero.hero-portrait-blended .portrait{animation:none}}
+
+/* User-uploaded PNG assets, replacing older WebP references */
+.header .brand-logo{mix-blend-mode:normal!important;background:transparent!important;object-fit:contain!important}
+.hero.hero-portrait-blended .portrait{background-image:url("/Hero%20Page%20Pic.png")!important;background-size:contain!important;background-repeat:no-repeat!important;background-position:center bottom!important;clip-path:none!important;-webkit-mask-image:none!important;mask-image:none!important;right:0;bottom:0;width:56%;height:94%;opacity:1!important}
+.hero.hero-portrait-blended .halo{z-index:1!important}
+@media(max-width:800px){.hero.hero-portrait-blended .portrait{right:-13%;width:100%;height:55%;bottom:0}}
