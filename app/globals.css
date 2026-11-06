@@ -222,3 +222,14 @@ animation:none!important;
 @media(min-width:1100px) and (max-height:700px){
 .hero.hero-portrait-blended h1{font-size:clamp(54px,10.2vh,84px)!important}
 }
+
+/* Final halo alignment: center its axis with the existing portrait; do not move portrait. */
+@media(min-width:1100px){
+.hero.hero-portrait-blended .halo{right:8%!important}
+}
+@media(min-width:801px) and (max-width:1099px){
+.hero.hero-portrait-blended .halo{right:5%!important}
+}
+@media(max-width:800px){
+.hero.hero-portrait-blended .halo{right:-5%!important}
+}
