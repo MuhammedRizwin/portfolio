@@ -233,3 +233,6 @@ animation:none!important;
 @media(max-width:800px){
 .hero.hero-portrait-blended .halo{right:-5%!important}
 }
+
+/* Golden separators in the hero tagline */
+.hero .subtitle b{color:#ffc900!important;-webkit-text-fill-color:#ffc900!important}
