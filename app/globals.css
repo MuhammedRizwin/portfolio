@@ -712,3 +712,28 @@ body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;b
  body::after{display:none!important}
  #contact .contact-form input:focus,#contact .contact-form textarea:focus{transform:none!important}
 }
+
+/* Distinct scroll-driven reveals across every portfolio section. */
+@keyframes mrsSectionGlint{from{transform:scaleX(0);opacity:.25}to{transform:scaleX(1);opacity:1}}
+#about .about-portrait-target,
+#about .values > div,
+#expertise .skill-accordion,
+#contact .contact-form{
+  opacity:0;
+  transform:translate3d(0,38px,0);
+  transition:opacity .85s cubic-bezier(.2,.8,.2,1),transform .85s cubic-bezier(.2,.8,.2,1),border-color .25s ease,background .25s ease;
+}
+#about .about-portrait-target.visible,
+#about .values > div.visible,
+#expertise .skill-accordion.visible,
+#contact .contact-form.visible{opacity:1;transform:translate3d(0,0,0)}
+#about .values > div:nth-child(2){transition-delay:.1s}
+#about .values > div:nth-child(3){transition-delay:.2s}
+#expertise .skill-accordion:nth-child(2n){transition-delay:.08s}
+#expertise .skill-accordion:nth-child(4n + 3){transition-delay:.14s}
+#expertise .skill-accordion:nth-child(4n){transition-delay:.2s}
+.section .section-top.visible::after{animation:mrsSectionGlint .85s cubic-bezier(.2,.8,.2,1) .15s both;transform-origin:left}
+@media (prefers-reduced-motion:reduce){
+ #about .about-portrait-target,#about .values > div,#expertise .skill-accordion,#contact .contact-form{opacity:1!important;transform:none!important;transition:none!important}
+ .section .section-top.visible::after{animation:none!important}
+}
