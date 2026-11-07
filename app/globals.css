@@ -505,3 +505,13 @@ filter:none!important;
 #expertise .skill-column .skill-accordion{flex:0 0 auto!important;align-self:stretch!important;background:#101114!important;border-bottom:1px solid #ffffff22!important}
 #expertise .skill-column .skill-accordion:hover,#expertise .skill-column .skill-accordion.skill-open{background:#1d1d1d!important}
 @media(max-width:800px){#expertise .skills.skills-independent{grid-template-columns:1fr!important}#expertise .skill-column{gap:1px!important}}
+
+/* Restore original aligned 2x3 grid; accordion detail floats over following rows. */
+#expertise .skills.skills-overlay{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:124px!important;gap:1px!important;align-items:stretch!important;overflow:visible!important;background:#ffffff22!important}
+#expertise .skills-overlay .skill-accordion{position:relative!important;min-width:0!important;min-height:0!important;height:124px!important;overflow:visible!important;background:#101114!important;z-index:1!important;border:0!important}
+#expertise .skills-overlay .skill-accordion.skill-open{z-index:20!important;background:#1d1d1d!important}
+#expertise .skills-overlay .skill-toggle{height:124px!important;min-height:124px!important;box-sizing:border-box!important}
+#expertise .skills-overlay .skill-detail{position:absolute!important;top:100%!important;left:0!important;right:0!important;z-index:30!important;padding:18px 24px 22px 56px!important;background:#1d1d1d!important;box-shadow:0 16px 30px #0009!important;border-bottom:1px solid #ffc90044!important}
+#expertise .skills-overlay .skill-detail[hidden]{display:none!important}
+#expertise .skills-overlay .skill-detail p{text-align:left!important;line-height:1.7!important}
+@media(max-width:800px){#expertise .skills.skills-overlay{grid-template-columns:1fr!important;grid-auto-rows:90px!important}#expertise .skills-overlay .skill-accordion{height:90px!important}#expertise .skills-overlay .skill-toggle{height:90px!important;min-height:90px!important}#expertise .skills-overlay .skill-detail{padding:16px 18px 20px 46px!important}}
