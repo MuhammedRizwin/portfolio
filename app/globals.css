@@ -449,3 +449,14 @@ filter:none!important;
 /* Match Expertise ("What I do") description to Work's extreme-right placement. */
 @media(min-width:801px){#expertise .expertise-head{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(320px,27vw)!important;column-gap:32px!important;align-items:center!important;width:calc(100% + 6.5vw)!important;max-width:none!important;margin-right:-6.5vw!important;padding-right:0!important}#expertise .expertise-head h2{grid-column:1!important;justify-self:start!important;margin-left:0!important}#expertise .expertise-head p{grid-column:2!important;justify-self:end!important;align-self:center!important;width:100%!important;max-width:none!important;margin:0!important;padding-right:clamp(12px,1.5vw,28px)!important;text-align:justify!important;text-align-last:left!important;hyphens:none!important}}
 @media(max-width:800px){#expertise .expertise-head{display:flex!important;flex-direction:column!important;align-items:stretch!important;width:100%!important;margin-right:0!important}#expertise .expertise-head p{width:100%!important;max-width:100%!important;text-align:justify!important}}
+
+/* Unified page gutters and clean editorial alignment — no offscreen descriptions. */
+#work,#expertise{overflow:hidden!important}
+@media(min-width:801px){
+#work .expertise-head,#expertise .expertise-head{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(300px,32%)!important;column-gap:clamp(30px,5vw,90px)!important;align-items:center!important;width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;box-sizing:border-box!important}
+#work .expertise-head h2,#expertise .expertise-head h2{grid-column:1!important;min-width:0!important;margin-left:0!important;justify-self:start!important}
+#work .expertise-head p,#expertise .expertise-head p{grid-column:2!important;min-width:0!important;width:100%!important;max-width:100%!important;justify-self:stretch!important;margin:0!important;padding:0!important;text-align:justify!important;text-align-last:left!important;hyphens:none!important;overflow-wrap:break-word!important}
+}
+@media(max-width:800px){#work .expertise-head,#expertise .expertise-head{display:flex!important;flex-direction:column!important;align-items:stretch!important;width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important;padding:0!important}#work .expertise-head p,#expertise .expertise-head p{width:100%!important;max-width:100%!important;padding:0!important;margin:0!important}}
+/* Remove ornamental yellow lines/circles/stars from empty section space. */
+.section .section-top:before,.section .section-top:after,#work .expertise-head:before,#work .expertise-head:after,#expertise .expertise-head:before,#expertise .expertise-head:after{content:none!important;display:none!important}
