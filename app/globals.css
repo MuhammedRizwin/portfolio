@@ -498,3 +498,10 @@ filter:none!important;
 #expertise .skill-detail{padding:0 23px 24px 56px!important;background:transparent!important}
 #expertise .skill-detail p{font-size:15px!important;line-height:1.7!important;color:#bdbdbd!important;text-align:left!important;margin:0!important}
 @media(max-width:800px){#expertise .skill-toggle{min-height:82px!important;padding:24px 16px!important;gap:14px!important}#expertise .skill-toggle h3{font-size:19px!important}#expertise .skill-detail{padding:0 16px 22px 46px!important}}
+
+/* Each Expertise column expands independently; opening left never stretches right. */
+#expertise .skills.skills-independent{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:1px!important;align-items:start!important}
+#expertise .skill-column{display:flex!important;flex-direction:column!important;min-width:0!important;align-self:start!important;gap:1px!important}
+#expertise .skill-column .skill-accordion{flex:0 0 auto!important;align-self:stretch!important;background:#101114!important;border-bottom:1px solid #ffffff22!important}
+#expertise .skill-column .skill-accordion:hover,#expertise .skill-column .skill-accordion.skill-open{background:#1d1d1d!important}
+@media(max-width:800px){#expertise .skills.skills-independent{grid-template-columns:1fr!important}#expertise .skill-column{gap:1px!important}}
