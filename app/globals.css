@@ -372,3 +372,7 @@ filter:none!important;
 .about .values{margin-top:clamp(28px,4vw,54px)!important}
 }
 @media(max-width:800px){.about-portrait-target{height:clamp(220px,62vw,310px)!important;max-width:310px!important}.about-grid h2{font-size:clamp(40px,9vw,62px)!important;line-height:1!important}.about.section{padding-top:36px!important;padding-bottom:42px!important}}
+
+/* Justify body paragraphs while preserving headings, labels, and buttons. */
+.about-grid .copy p,.about-grid .pull,.expertise-head p,.contact .reveal > p{text-align:justify!important;text-justify:inter-word;hyphens:auto}
+@media(max-width:600px){.about-grid .copy p,.about-grid .pull,.expertise-head p,.contact .reveal > p{text-align:left!important}}
