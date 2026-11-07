@@ -515,3 +515,10 @@ filter:none!important;
 #expertise .skills-overlay .skill-detail[hidden]{display:none!important}
 #expertise .skills-overlay .skill-detail p{text-align:left!important;line-height:1.7!important}
 @media(max-width:800px){#expertise .skills.skills-overlay{grid-template-columns:1fr!important;grid-auto-rows:90px!important}#expertise .skills-overlay .skill-accordion{height:90px!important}#expertise .skills-overlay .skill-toggle{height:90px!important;min-height:90px!important}#expertise .skills-overlay .skill-detail{padding:16px 18px 20px 46px!important}}
+
+/* Interactive hover/focus treatment for the About -> Expertise CTA. */
+.about .inline-link{position:relative;display:inline-flex;align-items:center;gap:12px;transition:color .25s ease,transform .25s ease,text-shadow .25s ease!important;will-change:transform}
+.about .inline-link svg{transition:transform .25s ease!important}
+@media(hover:hover){.about .inline-link:hover{color:#ffe36b!important;transform:translateY(-3px)!important;text-shadow:0 0 18px #ffc90055}.about .inline-link:hover svg{transform:translate(5px,-5px)!important}.about .inline-link:hover:after{transform:scaleX(1)!important}}
+.about .inline-link:focus-visible{outline:2px solid #ffc900;outline-offset:6px;border-radius:2px}
+@media(prefers-reduced-motion:reduce){.about .inline-link,.about .inline-link svg{transition:none!important}.about .inline-link:hover{transform:none!important}.about .inline-link:hover svg{transform:none!important}}
