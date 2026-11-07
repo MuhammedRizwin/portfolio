@@ -460,3 +460,6 @@ filter:none!important;
 @media(max-width:800px){#work .expertise-head,#expertise .expertise-head{display:flex!important;flex-direction:column!important;align-items:stretch!important;width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important;padding:0!important}#work .expertise-head p,#expertise .expertise-head p{width:100%!important;max-width:100%!important;padding:0!important;margin:0!important}}
 /* Remove ornamental yellow lines/circles/stars from empty section space. */
 .section .section-top:before,.section .section-top:after,#work .expertise-head:before,#work .expertise-head:after,#expertise .expertise-head:before,#expertise .expertise-head:after{content:none!important;display:none!important}
+
+/* Nudge both right-hand descriptions inward to align with the section border. */
+@media(min-width:801px){#work .expertise-head p,#expertise .expertise-head p{transform:translateX(-18px)!important;width:calc(100% - 18px)!important}}
