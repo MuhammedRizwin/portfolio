@@ -985,3 +985,79 @@ body::after{display:none!important}
  #expertise .skills-overlay .skill-accordion:last-child:nth-child(odd){grid-column:auto!important;width:100%!important}
  #expertise .skills-overlay .skill-detail{padding:0 18px 20px 46px!important}
 }
+
+/* Expertise accordion: fixed independent grid rows; descriptions overlay below their own card.
+   No row expansion, empty opposite-side cells, or grey placeholder strips. */
+#expertise .skills.skills-overlay{
+ display:grid!important;
+ grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ grid-auto-rows:112px!important;
+ gap:1px!important;
+ align-items:stretch!important;
+ overflow:visible!important;
+ background:transparent!important;
+ isolation:isolate;
+}
+#expertise .skills-overlay .skill-accordion{
+ position:relative!important;
+ box-sizing:border-box!important;
+ height:112px!important;
+ min-height:112px!important;
+ max-height:112px!important;
+ overflow:visible!important;
+ background:#101114!important;
+ border:1px solid #ffffff1a!important;
+ z-index:1!important;
+ opacity:1!important;
+ transform:none!important;
+}
+#expertise .skills-overlay .skill-accordion.skill-open{
+ z-index:30!important;
+ background:#17181a!important;
+}
+#expertise .skills-overlay .skill-toggle{
+ height:110px!important;
+ min-height:110px!important;
+ max-height:110px!important;
+ padding:20px 22px!important;
+ background:transparent!important;
+}
+#expertise .skills-overlay .skill-detail{
+ position:absolute!important;
+ top:calc(100% - 1px)!important;
+ left:-1px!important;
+ right:-1px!important;
+ bottom:auto!important;
+ box-sizing:border-box!important;
+ z-index:31!important;
+ padding:18px 22px 22px 56px!important;
+ background:#17181a!important;
+ border:1px solid #ffffff1a!important;
+ border-top:0!important;
+ box-shadow:0 16px 26px #0009!important;
+}
+#expertise .skills-overlay .skill-detail[hidden]{display:none!important}
+@media(min-width:801px){
+ #expertise .skills-overlay .skill-accordion:last-child:nth-child(odd){
+  grid-column:1 / -1!important;
+  width:calc(50% - 1px)!important;
+  justify-self:center!important;
+ }
+}
+@media(max-width:800px){
+ #expertise .skills.skills-overlay{
+  grid-template-columns:minmax(0,1fr)!important;
+  grid-auto-rows:94px!important;
+ }
+ #expertise .skills-overlay .skill-accordion{
+  height:94px!important;min-height:94px!important;max-height:94px!important;
+ }
+ #expertise .skills-overlay .skill-toggle{
+  height:92px!important;min-height:92px!important;max-height:92px!important;
+  padding:16px!important;
+ }
+ #expertise .skills-overlay .skill-detail{padding:16px 18px 20px 46px!important}
+ #expertise .skills-overlay .skill-accordion:last-child:nth-child(odd){
+  grid-column:auto!important;width:100%!important;
+ }
+}
