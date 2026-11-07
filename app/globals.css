@@ -830,3 +830,13 @@ body::after{display:none!important}
   font-size:clamp(30px,6.5vw,42px)!important;
  }
 }
+
+/* Smaller mobile signature, centered with comfortable side margins. */
+@media(max-width:600px){
+ .mrs-name-loader-title{
+  font-size:clamp(24px,5.2vw,32px)!important;
+  line-height:1.55!important;
+  letter-spacing:0!important;
+ }
+ .mrs-name-loader-inner{max-width:calc(100vw - 48px)!important}
+}
