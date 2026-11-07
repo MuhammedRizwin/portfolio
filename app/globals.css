@@ -537,3 +537,6 @@ filter:none!important;
 .hero .hero-socials a img{display:block;width:19px;height:19px;object-fit:contain;transition:filter .2s}
 @media(hover:hover){.hero .hero-socials a:hover img{filter:brightness(0)}}
 @media(max-width:800px){.hero .hero-socials a img{width:17px;height:17px}}
+
+/* Rounded WhatsApp contact CTA, without changing other buttons. */
+#contact .btn.primary{border-radius:999px!important}
