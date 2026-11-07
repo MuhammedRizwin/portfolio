@@ -753,3 +753,16 @@ body::after{display:none!important}
 .mrs-name-loader-line{display:block;width:min(180px,50vw);height:2px;background:linear-gradient(90deg,transparent,#FFC900,transparent);transform-origin:center;animation:mrsLoaderLine 1.3s .35s cubic-bezier(.2,.8,.2,1) both}
 @media(max-width:600px){.mrs-name-loader-title{font-size:clamp(31px,8vw,45px);line-height:1.32}.mrs-name-loader-inner{gap:20px}.mrs-name-loader-kicker{font-size:9px;letter-spacing:.3em}}
 @media(prefers-reduced-motion:reduce){.mrs-name-loader{display:none!important}}
+
+/* Premium split-screen reveal replaces the plain curtain transition. */
+@keyframes mrsLoaderSplitLeft{0%,60%{transform:translateX(0)}100%{transform:translateX(-105%)}}
+@keyframes mrsLoaderSplitRight{0%,60%{transform:translateX(0)}100%{transform:translateX(105%)}}
+@keyframes mrsLoaderContentOut{0%,55%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}72%,100%{opacity:0;transform:translateY(-18px) scale(1.04);filter:blur(6px)}}
+@keyframes mrsLoaderGoldFlash{0%,60%{opacity:0;transform:scaleY(.3)}67%{opacity:1;transform:scaleY(1)}90%,100%{opacity:0;transform:scaleY(.3)}}
+.mrs-name-loader{background:transparent!important;overflow:hidden;animation:mrsLoaderExit 2.25s linear both}
+.mrs-name-loader::before,.mrs-name-loader::after{content:"";position:absolute;top:0;bottom:0;width:50.1%;background:#08090B;z-index:0;will-change:transform}
+.mrs-name-loader::before{left:0;animation:mrsLoaderSplitLeft 2.25s cubic-bezier(.76,0,.24,1) both}
+.mrs-name-loader::after{right:0;animation:mrsLoaderSplitRight 2.25s cubic-bezier(.76,0,.24,1) both}
+.mrs-name-loader-inner{position:relative;z-index:2;animation:mrsLoaderContentOut 2.25s ease both}
+.mrs-name-loader-inner::after{content:"";position:absolute;left:50%;top:-100vh;height:200vh;width:2px;background:linear-gradient(180deg,transparent,#FFC900,transparent);pointer-events:none;z-index:-1;animation:mrsLoaderGoldFlash 2.25s ease both}
+@media(prefers-reduced-motion:reduce){.mrs-name-loader,.mrs-name-loader::before,.mrs-name-loader::after,.mrs-name-loader-inner,.mrs-name-loader-inner::after{animation:none!important}.mrs-name-loader{display:none!important}}
