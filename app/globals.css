@@ -430,3 +430,7 @@ filter:none!important;
 /* Work description: right-aligned column opposite the left headline. */
 @media(min-width:801px){#work .expertise-head{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:clamp(32px,5vw,100px)!important}#work .expertise-head h2{flex:1 1 auto!important;min-width:0}#work .expertise-head p{flex:0 1 460px!important;width:38%!important;max-width:460px!important;margin:0 0 0 auto!important;text-align:justify!important;hyphens:none!important;line-height:1.7!important}}
 @media(max-width:800px){#work .expertise-head{display:flex!important;flex-direction:column!important;align-items:flex-start!important}#work .expertise-head p{width:100%!important;max-width:100%!important;text-align:justify!important}}
+
+/* Justified alignment for the three About value statements. */
+.about .values>div strong{display:block!important;width:max-content!important;max-width:100%!important;text-align:justify!important;text-align-last:justify!important;text-justify:inter-word!important}
+.about .values>div{align-items:center!important}
