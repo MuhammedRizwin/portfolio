@@ -442,3 +442,6 @@ filter:none!important;
 #work .expertise-head p{grid-column:2!important;justify-self:end!important;align-self:center!important;width:100%!important;max-width:none!important;margin:0!important;text-align:justify!important;text-align-last:left!important;hyphens:none!important}
 }
 @media(max-width:800px){#work .expertise-head{display:flex!important;flex-direction:column!important;align-items:stretch!important}#work .expertise-head p{width:100%!important;max-width:100%!important}}
+
+/* Work description at the extreme right of the viewport, beyond section's standard inset. */
+@media(min-width:801px){#work .expertise-head{width:calc(100% + 6.5vw)!important;max-width:none!important;grid-template-columns:minmax(0,1fr) minmax(320px,27vw)!important;padding-right:0!important;margin-right:-6.5vw!important}#work .expertise-head p{justify-self:end!important;margin-right:0!important;padding-right:clamp(12px,1.5vw,28px)!important;max-width:none!important}}
