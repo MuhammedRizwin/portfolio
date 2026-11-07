@@ -926,3 +926,10 @@ body::after{display:none!important}
 @media(max-width:800px){
  .hero.hero-portrait-blended .halo{left:20%!important;right:auto!important}
 }
+
+/* Final hero stack: portrait above the ring and shade; heading stays foremost. */
+.hero.hero-portrait-blended .halo{z-index:1!important}
+.hero.hero-portrait-blended .hero-shade{z-index:3!important;pointer-events:none!important}
+.hero.hero-portrait-blended .portrait{z-index:7!important;isolation:isolate;pointer-events:none!important}
+.hero.hero-portrait-blended .hero-content{z-index:8!important}
+.hero.hero-portrait-blended .hero-socials,.hero.hero-portrait-blended .scroll{z-index:9!important}
