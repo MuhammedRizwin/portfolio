@@ -606,3 +606,7 @@ html{scroll-behavior:smooth}
  .about .about-portrait-target{background:radial-gradient(ellipse at 50% 68%,#ffbd0011,transparent 65%)}
 }
 @media(max-width:800px){.about .about-portrait-target{transform:none!important}}
+
+/* Vertically center the About introduction alongside the portrait. */
+@media(min-width:801px){.about .about-grid .about-intro{align-self:center!important;transform:translateY(28px)!important}}
+@media(max-width:800px){.about .about-grid .about-intro{transform:none!important}}
