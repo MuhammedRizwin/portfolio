@@ -326,3 +326,14 @@ filter:none!important;
 .contact h2 em,.contact .gold,.contact .kicker{color:#ffc900!important}
 .contact .primary{background:#ffc900!important;color:#08090b!important}
 .contact .secondary{border-color:#f5f3ef!important;color:#f5f3ef!important}
+
+/* Reversible scroll-linked transition between Hero and About. */
+@media(prefers-reduced-motion:no-preference){
+.hero.hero-portrait-blended{--hero-transition:0;transform-origin:center top}
+.hero.hero-portrait-blended .hero-content{transform:translate3d(0,calc(var(--hero-transition)* -85px),0);opacity:calc(1 - var(--hero-transition)* .78);will-change:transform,opacity}
+.hero.hero-portrait-blended .portrait{transform:translate3d(calc(var(--hero-transition)* 42px),calc(var(--hero-transition)* -58px),0) scale(calc(1 - var(--hero-transition)* .075));opacity:calc(1 - var(--hero-transition)* .52)!important;will-change:transform,opacity}
+.hero.hero-portrait-blended .halo{transform:translate3d(0,calc(var(--hero-transition)* -55px),0) scale(calc(1 + var(--hero-transition)* .12));opacity:calc(1 - var(--hero-transition)* .75)!important;will-change:transform,opacity}
+.about{position:relative;z-index:3;background:#08090b;box-shadow:0 -25px 65px #08090b55}
+.about:before{content:"";position:absolute;left:0;right:0;top:-90px;height:90px;background:linear-gradient(to bottom,transparent,#08090b);pointer-events:none}
+}
+@media(max-width:800px) and (prefers-reduced-motion:no-preference){.hero.hero-portrait-blended .hero-content{transform:translate3d(0,calc(var(--hero-transition)* -35px),0);opacity:calc(1 - var(--hero-transition)* .3)}.hero.hero-portrait-blended .portrait{transform:translate3d(0,calc(var(--hero-transition)* -35px),0) scale(calc(1 - var(--hero-transition)* .04))}}
