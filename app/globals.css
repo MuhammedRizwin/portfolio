@@ -1202,3 +1202,13 @@ body::after{display:none!important}
  #faq .faq-list:has(.faq-item:last-child[open]){padding-bottom:165px!important}
  #faq .faq-list:has(.faq-item:nth-last-child(2)[open]){padding-bottom:165px!important}
 }
+
+/* FAQ: only a small clearance directly under the open overlay, no oversized empty area. */
+#faq.section{padding-bottom:20px!important}
+#faq .faq-list{padding-bottom:0!important}
+#faq .faq-list:has(.faq-item:nth-last-child(-n+2)[open]){padding-bottom:35px!important}
+@media(max-width:800px){
+ #faq.section{padding-bottom:16px!important}
+ #faq .faq-list:has(.faq-item:last-child[open]),
+ #faq .faq-list:has(.faq-item:nth-last-child(2)[open]){padding-bottom:65px!important}
+}
