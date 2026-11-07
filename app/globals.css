@@ -421,3 +421,8 @@ filter:none!important;
 .about .values{align-items:start;text-align:center!important}
 .about .values>div{text-align:center!important;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
 .about .values small,.about .values strong{text-align:center!important}
+
+/* Work description sits on the left, directly beneath its headline. */
+#work .expertise-head{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;gap:14px!important}
+#work .expertise-head p{max-width:600px!important;width:100%;margin:0!important;text-align:left!important;line-height:1.7!important}
+#work .expertise-head:after{margin-top:6px!important}
