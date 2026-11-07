@@ -867,3 +867,24 @@ body::after{display:none!important}
  .hero.hero-portrait-blended .hero-content{z-index:4!important}
  .hero.hero-portrait-blended .halo{left:1%!important;right:auto!important}
 }
+
+/* Portrait fine-tuning: bring the full figure into frame without covering SEO H1. */
+@media(min-width:1100px){
+ .hero.hero-portrait-blended .portrait{
+   right:-3%!important;
+   width:49%!important;
+   height:88%!important;
+   bottom:-3%!important;
+   background-size:contain!important;
+   background-position:center bottom!important;
+ }
+ .hero.hero-portrait-blended .hero-content{z-index:5!important}
+ .hero.hero-portrait-blended .halo{z-index:1!important;left:13%!important}
+}
+@media(min-width:801px) and (max-width:1099px){
+ .hero.hero-portrait-blended .portrait{
+   right:-5%!important;width:50%!important;height:85%!important;
+   bottom:-2%!important;background-size:contain!important;background-position:center bottom!important;
+ }
+ .hero.hero-portrait-blended .hero-content{z-index:5!important}
+}
