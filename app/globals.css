@@ -337,3 +337,14 @@ filter:none!important;
 .about:before{content:"";position:absolute;left:0;right:0;top:-90px;height:90px;background:linear-gradient(to bottom,transparent,#08090b);pointer-events:none}
 }
 @media(max-width:800px) and (prefers-reduced-motion:no-preference){.hero.hero-portrait-blended .hero-content{transform:translate3d(0,calc(var(--hero-transition)* -35px),0);opacity:calc(1 - var(--hero-transition)* .3)}.hero.hero-portrait-blended .portrait{transform:translate3d(0,calc(var(--hero-transition)* -35px),0) scale(calc(1 - var(--hero-transition)* .04))}}
+
+/* Portrait-only reversible scroll movement; hero typography and halo remain stationary. */
+@media(prefers-reduced-motion:no-preference){
+.hero.hero-portrait-blended .hero-content{transform:none!important;opacity:1!important;will-change:auto!important}
+.hero.hero-portrait-blended .halo{transform:none!important;opacity:1!important;will-change:auto!important}
+.hero.hero-portrait-blended .portrait{animation:none!important;transform:translate3d(0,calc(var(--portrait-travel,0)*1px),0) scale(calc(1 - var(--hero-transition,0)*.12))!important;opacity:1!important;will-change:transform!important;transition:none!important}
+.hero.hero-portrait-blended{overflow:visible!important}
+.hero.hero-portrait-blended .portrait{pointer-events:none}
+.about{isolation:isolate}
+}
+@media(max-width:800px) and (prefers-reduced-motion:no-preference){.hero.hero-portrait-blended .portrait{transform:translate3d(0,calc(var(--portrait-travel,0)*.45px),0) scale(calc(1 - var(--hero-transition,0)*.1))!important}}
