@@ -1183,3 +1183,13 @@ body::after{display:none!important}
 @media(max-width:800px){
  #expertise .skills.skills-overlay,#faq .faq-list{padding-bottom:235px!important}
 }
+
+/* Compact bottom clearance: enough for final-row overlay content, not a blank block. */
+#expertise .skills.skills-overlay,#faq .faq-list{
+ padding-bottom:96px!important;
+}
+@media(max-width:800px){
+ #expertise .skills.skills-overlay,#faq .faq-list{
+  padding-bottom:145px!important;
+ }
+}
