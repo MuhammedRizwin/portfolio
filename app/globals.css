@@ -533,3 +533,7 @@ filter:none!important;
 /* Avoid empty grey grid cell when the expertise list has an odd item count. */
 #expertise .skills-overlay .skill-accordion:last-child:nth-child(odd){grid-column:1 / -1!important}
 @media(max-width:800px){#expertise .skills-overlay .skill-accordion:last-child:nth-child(odd){grid-column:auto!important}}
+
+.hero .hero-socials a img{display:block;width:19px;height:19px;object-fit:contain;transition:filter .2s}
+@media(hover:hover){.hero .hero-socials a:hover img{filter:brightness(0)}}
+@media(max-width:800px){.hero .hero-socials a img{width:17px;height:17px}}
