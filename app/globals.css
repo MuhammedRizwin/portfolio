@@ -656,3 +656,13 @@ html{scroll-behavior:smooth}
 #contact .contact-form .contact-submit:hover:not(:disabled){background:#F5F3EF!important;border-color:#F5F3EF!important;color:#08090B!important;transform:translateY(-2px)!important;box-shadow:0 8px 25px #FFC90020!important}
 #contact .contact-form .contact-submit:focus-visible{outline:2px solid #FFC900!important;outline-offset:4px!important}
 #contact .contact-form .contact-form-note{color:#F5F3EF99!important}
+
+/* MRS contact fields: visible gold-accented boxes and consistent ivory/gold typography. */
+#contact .contact-form label{color:#FFC900!important;font-weight:650!important;letter-spacing:.055em!important}
+#contact .contact-form input,#contact .contact-form textarea{background:#151515!important;color:#F5F3EF!important;border:1.5px solid #FFC90088!important;border-radius:12px!important;caret-color:#FFC900!important}
+#contact .contact-form input::placeholder,#contact .contact-form textarea::placeholder{color:#C9C6BD!important;opacity:.78!important}
+#contact .contact-form input:hover,#contact .contact-form textarea:hover{background:#191919!important;border-color:#FFC900!important}
+#contact .contact-form input:focus,#contact .contact-form textarea:focus{background:#1A1915!important;color:#FFFFFF!important;border-color:#FFC900!important;box-shadow:0 0 0 3px #FFC90030!important}
+#contact .contact-form-note{color:#D2CEC3!important}
+#contact .contact-form-status.success{color:#FFC900!important}
+#contact .contact-form-status.error{color:#FFB8A7!important}
