@@ -796,3 +796,37 @@ body::after{display:none!important}
 /* Medium-sized signature loader typography on all screens. */
 .mrs-name-loader-title{font-size:clamp(32px,4.2vw,62px)!important;line-height:1.45!important}
 @media(max-width:600px){.mrs-name-loader-title{font-size:clamp(30px,6.5vw,42px)!important;line-height:1.5!important}}
+
+/* Precisely center the signature loader in mobile viewports. */
+@media(max-width:600px){
+ .mrs-name-loader{
+  position:fixed!important;
+  inset:0!important;
+  width:100vw!important;
+  height:100vh!important;
+  height:100dvh!important;
+  padding:20px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+ }
+ .mrs-name-loader-inner{
+  position:relative!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:0 auto!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex-direction:column!important;
+  text-align:center!important;
+ }
+ .mrs-name-loader-title{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  text-align:center!important;
+  margin:0!important;
+  font-size:clamp(30px,6.5vw,42px)!important;
+ }
+}
