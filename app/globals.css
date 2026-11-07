@@ -396,3 +396,15 @@ filter:none!important;
 @media(min-width:1001px){.about .about-intro h2{font-size:clamp(46px,3.9vw,76px)!important;line-height:1.03!important}.about .about-intro .pull{font-size:clamp(19px,1.35vw,23px)!important;line-height:1.6!important}}
 @media(min-width:801px) and (max-width:1000px){.about .about-intro h2{font-size:clamp(38px,4.3vw,53px)!important}.about .about-intro .pull{font-size:18px!important;line-height:1.55!important}}
 @media(max-width:800px){.about .about-intro h2{font-size:clamp(45px,10vw,68px)!important}.about .about-intro .pull{font-size:19px!important;line-height:1.6!important}}
+
+/* Subtle visual fillers for sparse section headers; no invented portfolio content. */
+.section:not(.hero){position:relative}
+.section .section-top{position:relative;align-items:center;min-height:58px;gap:20px}
+.section .section-top:after{content:"";position:absolute;left:50%;bottom:-1px;transform:translateX(-50%);width:78px;height:2px;background:linear-gradient(90deg,transparent,#ffc900,transparent);opacity:.8}
+.section .section-top:before{content:"✦";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#ffc900;font-size:15px;opacity:.72;letter-spacing:0}
+#work,#expertise,#contact{background-image:radial-gradient(ellipse 38% 55% at 98% 8%,#ffc90009,transparent 80%),linear-gradient(90deg,transparent 0%,transparent 94%,#ffc90007 94%,transparent 94.1%)}
+#work .section-top,#expertise .section-top,#contact .section-top{border-bottom-color:#ffffff30}
+#work .expertise-head:after,#expertise .expertise-head:after{content:"";display:block;width:clamp(60px,9vw,135px);height:3px;margin-top:20px;background:linear-gradient(90deg,#ffc900,transparent);opacity:.85}
+#work .expertise-head,#expertise .expertise-head{position:relative}
+#work .expertise-head:before,#expertise .expertise-head:before{content:"";position:absolute;right:0;top:-12px;width:38px;height:38px;border:1px solid #ffc90040;border-radius:50%;box-shadow:0 0 0 12px #ffc90006;pointer-events:none}
+@media(max-width:800px){.section .section-top:before{display:none}.section .section-top:after{left:0;transform:none;width:55px}.section .section-top{min-height:46px}#work .expertise-head:before,#expertise .expertise-head:before{width:24px;height:24px}}
