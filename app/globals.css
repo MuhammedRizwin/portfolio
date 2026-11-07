@@ -933,3 +933,55 @@ body::after{display:none!important}
 .hero.hero-portrait-blended .portrait{z-index:7!important;isolation:isolate;pointer-events:none!important}
 .hero.hero-portrait-blended .hero-content{z-index:8!important}
 .hero.hero-portrait-blended .hero-socials,.hero.hero-portrait-blended .scroll{z-index:9!important}
+
+/* Expertise accordion repair: remove floating grey overlay and layout artifacts. */
+#expertise .skills.skills-overlay{
+ display:grid!important;
+ grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ grid-auto-rows:auto!important;
+ align-items:start!important;
+ gap:1px!important;
+ background:transparent!important;
+ overflow:visible!important;
+}
+#expertise .skills-overlay .skill-accordion{
+ position:relative!important;
+ height:auto!important;
+ min-height:100px!important;
+ overflow:hidden!important;
+ background:#101114!important;
+ border:1px solid #ffffff1a!important;
+ z-index:auto!important;
+ transform:none!important;
+ opacity:1!important;
+}
+#expertise .skills-overlay .skill-accordion.skill-open{background:#17181a!important}
+#expertise .skills-overlay .skill-toggle{
+ display:flex!important;
+ height:auto!important;
+ min-height:100px!important;
+ width:100%!important;
+ background:transparent!important;
+}
+#expertise .skills-overlay .skill-toggle:hover{background:#ffffff06!important}
+#expertise .skills-overlay .skill-detail{
+ position:static!important;
+ inset:auto!important;
+ box-shadow:none!important;
+ background:transparent!important;
+ padding:0 22px 24px 56px!important;
+ border:0!important;
+}
+#expertise .skills-overlay .skill-detail[hidden]{display:none!important}
+@media(min-width:801px){
+ #expertise .skills-overlay .skill-accordion:last-child:nth-child(odd){
+  grid-column:1 / -1!important;
+  width:calc(50% - 1px)!important;
+  justify-self:center!important;
+ }
+}
+@media(max-width:800px){
+ #expertise .skills.skills-overlay{grid-template-columns:minmax(0,1fr)!important}
+ #expertise .skills-overlay .skill-accordion:last-child:nth-child(odd){grid-column:auto!important;width:100%!important}
+ #expertise .skills-overlay .skill-detail{padding:0 18px 20px 46px!important}
+}
