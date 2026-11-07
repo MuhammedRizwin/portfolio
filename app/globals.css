@@ -792,3 +792,7 @@ body::after{display:none!important}
 .mrs-name-loader-inner{z-index:2!important;animation:mrsLuxuryNameExit 2.25s ease both!important}
 .mrs-name-loader-inner::after{display:none!important;animation:none!important}
 @media(prefers-reduced-motion:reduce){.mrs-name-loader{display:none!important}}
+
+/* Medium-sized signature loader typography on all screens. */
+.mrs-name-loader-title{font-size:clamp(32px,4.2vw,62px)!important;line-height:1.45!important}
+@media(max-width:600px){.mrs-name-loader-title{font-size:clamp(30px,6.5vw,42px)!important;line-height:1.5!important}}
