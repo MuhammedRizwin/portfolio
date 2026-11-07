@@ -693,3 +693,22 @@ html{scroll-behavior:smooth}
   box-shadow:0 0 0 1000px #151515 inset!important;
   caret-color:#FFC900!important;
 }
+
+/* MRS cinematic page entrance and refined section motion */
+@keyframes mrsPageCurtain{0%{transform:scaleY(1)}100%{transform:scaleY(0)}}
+@keyframes mrsIntroReveal{from{opacity:0;transform:translate3d(0,24px,0);filter:blur(5px)}to{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}}
+@keyframes mrsGoldSweep{from{transform:translateX(-130%)}to{transform:translateX(230%)}}
+@keyframes mrsSoftShimmer{0%,100%{opacity:.3}50%{opacity:.75}}
+body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;background:#08090B;transform-origin:top;animation:mrsPageCurtain .85s cubic-bezier(.76,0,.24,1) .12s both}
+.hero .hero-content{animation:mrsIntroReveal .9s cubic-bezier(.2,.7,.2,1) .4s both}
+.hero .rule{position:relative;overflow:hidden}
+.hero .rule::after{content:"";position:absolute;inset:0;background:#F5F3EF;opacity:.7;animation:mrsGoldSweep 1.4s ease-out 1.15s both}
+#contact .contact-form{position:relative;isolation:isolate}
+#contact .contact-form::before{content:"";position:absolute;inset:-1px;z-index:-1;border-radius:18px;pointer-events:none;background:radial-gradient(ellipse at 95% 5%,#FFC90013,transparent 55%);animation:mrsSoftShimmer 8s ease-in-out infinite}
+#contact .contact-form input,#contact .contact-form textarea{transition:background .3s ease,border-color .3s ease,box-shadow .3s ease,transform .3s ease!important}
+#contact .contact-form input:focus,#contact .contact-form textarea:focus{transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){
+ body::after,.hero .hero-content,.hero .rule::after,#contact .contact-form::before{animation:none!important}
+ body::after{display:none!important}
+ #contact .contact-form input:focus,#contact .contact-form textarea:focus{transform:none!important}
+}
