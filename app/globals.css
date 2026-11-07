@@ -416,3 +416,8 @@ filter:none!important;
 .about .section-top,.about .about-grid,.about .values{position:relative;z-index:6}
 .about .section-top{background:#08090b;isolation:isolate}
 .about .about-intro,.about .copy{position:relative;z-index:7}
+
+/* Center the three About values: labels and statements. */
+.about .values{align-items:start;text-align:center!important}
+.about .values>div{text-align:center!important;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+.about .values small,.about .values strong{text-align:center!important}
