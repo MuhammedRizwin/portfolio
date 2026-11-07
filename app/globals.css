@@ -781,3 +781,14 @@ body::after{display:none!important}
 .mrs-name-loader-title em{color:#FFC900!important}
 .mrs-name-loader-inner{gap:12px!important}
 @media(max-width:600px){.mrs-name-loader-title{font-size:clamp(40px,9.3vw,62px)!important;line-height:1.5!important}}
+
+/* Luxury light-sweep loader: replaces the earlier split-panel transition. */
+@keyframes mrsLuxurySweep{0%,39%{transform:translateX(-135%) skewX(-19deg);opacity:0}45%{opacity:.9}75%{opacity:.75}94%,100%{transform:translateX(135%) skewX(-19deg);opacity:0}}
+@keyframes mrsLuxuryReveal{0%,61%{clip-path:inset(0 0 0 0);opacity:1}100%{clip-path:inset(0 0 100% 0);opacity:0}}
+@keyframes mrsLuxuryNameExit{0%,58%{opacity:1;filter:blur(0);transform:translateY(0)}78%,100%{opacity:0;filter:blur(10px);transform:translateY(-14px)}}
+.mrs-name-loader{background:#08090B!important;overflow:hidden;animation:mrsLuxuryReveal 2.25s cubic-bezier(.76,0,.24,1) both!important}
+.mrs-name-loader::before{left:-40%!important;top:-25%!important;bottom:-25%!important;width:55%!important;z-index:1!important;background:linear-gradient(90deg,transparent 0%,#FFC90008 25%,#FFC90050 48%,#F5F3EFaa 50%,#FFC90048 53%,#FFC9000a 75%,transparent 100%)!important;filter:blur(12px);will-change:transform;animation:mrsLuxurySweep 2.25s ease-in-out both!important}
+.mrs-name-loader::after{display:none!important;animation:none!important}
+.mrs-name-loader-inner{z-index:2!important;animation:mrsLuxuryNameExit 2.25s ease both!important}
+.mrs-name-loader-inner::after{display:none!important;animation:none!important}
+@media(prefers-reduced-motion:reduce){.mrs-name-loader{display:none!important}}
