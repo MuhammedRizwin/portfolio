@@ -1061,3 +1061,17 @@ body::after{display:none!important}
   grid-column:auto!important;width:100%!important;
  }
 }
+
+/* Accessible SEO/AEO FAQ accordion; independent rows with no layout overlays. */
+.faq-section .expertise-head{margin-bottom:32px}
+.faq-list{border-top:1px solid #ffffff2b;max-width:1100px;margin:0 auto}
+.faq-item{border-bottom:1px solid #ffffff2b;background:transparent}
+.faq-item summary{display:flex;align-items:center;gap:22px;cursor:pointer;list-style:none;padding:25px 18px;color:#f5f3ef;font-size:clamp(17px,1.5vw,23px);font-weight:600}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-number{color:#ffc900;font-size:13px;font-weight:700;flex:none}
+.faq-plus{margin-left:auto;color:#ffc900;font-size:27px;font-weight:400;transition:transform .2s}
+.faq-item[open] .faq-plus{transform:rotate(45deg)}
+.faq-item[open]{background:#ffffff06}
+.faq-item p{padding:0 55px 27px;margin:0;max-width:930px;color:#c9c9c9;line-height:1.8;font-size:16px}
+.faq-item summary:focus-visible{outline:2px solid #ffc900;outline-offset:-2px}
+@media(max-width:800px){.faq-item summary{padding:20px 12px;gap:13px;font-size:17px}.faq-item p{padding:0 18px 22px 42px;font-size:14px}.faq-plus{font-size:23px}}
