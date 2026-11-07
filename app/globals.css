@@ -637,3 +637,10 @@ html{scroll-behavior:smooth}
 
 /* Center the contact headline and WhatsApp CTA vertically against the form. */
 @media(min-width:851px){#contact .contact-layout{align-items:center!important}#contact .contact-layout .contact-intro{align-self:center!important}}
+
+/* Direct contact form feedback and bot-trap field. */
+#contact .contact-honeypot{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important}
+#contact .contact-submit:disabled{opacity:.65;cursor:wait}
+#contact .contact-form-status{font-size:14px!important;line-height:1.5!important;margin:0!important}
+#contact .contact-form-status.success{color:#b8e8ba!important}
+#contact .contact-form-status.error{color:#ffb5a9!important}
