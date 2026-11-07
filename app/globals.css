@@ -434,3 +434,11 @@ filter:none!important;
 /* Justified alignment for the three About value statements. */
 .about .values>div strong{display:block!important;width:max-content!important;max-width:100%!important;text-align:justify!important;text-align-last:justify!important;text-justify:inter-word!important}
 .about .values>div{align-items:center!important}
+
+/* Work section: push description to the far-right content edge. */
+@media(min-width:801px){
+#work .expertise-head{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(330px,28%)!important;column-gap:32px!important;align-items:center!important;width:100%!important}
+#work .expertise-head h2{grid-column:1!important;justify-self:start!important;margin-left:0!important}
+#work .expertise-head p{grid-column:2!important;justify-self:end!important;align-self:center!important;width:100%!important;max-width:none!important;margin:0!important;text-align:justify!important;text-align-last:left!important;hyphens:none!important}
+}
+@media(max-width:800px){#work .expertise-head{display:flex!important;flex-direction:column!important;align-items:stretch!important}#work .expertise-head p{width:100%!important;max-width:100%!important}}
