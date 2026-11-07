@@ -485,3 +485,16 @@ filter:none!important;
 #expertise .skill-detail[hidden]{display:none!important}
 #expertise .skill-detail p{max-width:520px;margin:0;color:#b9b9b9;font-size:15px;line-height:1.75;text-align:left!important;hyphens:none}
 @media(max-width:800px){#expertise .skill-toggle{min-height:80px;padding:18px 14px;gap:15px}#expertise .skill-detail{padding:0 18px 22px 45px}#expertise .skill-toggle h3{font-size:18px}}
+
+/* Restore original Expertise tiles exactly: number, title, diagonal arrow, hover background. */
+#expertise .skills .skill-accordion{display:block!important;padding:0!important;min-height:0!important;overflow:hidden!important}
+#expertise .skill-toggle{display:flex!important;align-items:center!important;gap:20px!important;width:100%!important;min-height:110px!important;padding:clamp(22px,3.2vh,31px) 23px!important;border:0!important;border-radius:0!important;background:transparent!important;color:inherit!important;text-align:left!important;cursor:pointer!important}
+#expertise .skill-toggle small{flex:none!important;color:#ffc900!important}
+#expertise .skill-toggle h3{flex:1!important;margin:0!important;font-size:clamp(18px,1.75vw,25px)!important;font-weight:700!important}
+#expertise .skill-original-arrow{display:block!important;flex:none!important;color:#f5f3ef!important;transition:transform .25s ease!important}
+#expertise .skill-open .skill-original-arrow{transform:rotate(90deg)!important;color:#ffc900!important}
+#expertise .skill-toggle:hover,#expertise .skill-toggle:focus-visible{background:transparent!important}
+#expertise .skill-accordion:hover,#expertise .skill-accordion.skill-open{background:#ffffff0a!important}
+#expertise .skill-detail{padding:0 23px 24px 56px!important;background:transparent!important}
+#expertise .skill-detail p{font-size:15px!important;line-height:1.7!important;color:#bdbdbd!important;text-align:left!important;margin:0!important}
+@media(max-width:800px){#expertise .skill-toggle{min-height:82px!important;padding:24px 16px!important;gap:14px!important}#expertise .skill-toggle h3{font-size:19px!important}#expertise .skill-detail{padding:0 16px 22px 46px!important}}
