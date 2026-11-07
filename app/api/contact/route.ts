@@ -27,7 +27,7 @@ export async function POST(request:NextRequest){
       headers:{'Authorization':'Bearer '+apiKey,'Content-Type':'application/json'},
       body:JSON.stringify({
         from,
-        to:['muhammedrizwinsadique@gmail.com'],
+        to:['rizwinsadique7260@gmail.com'],
         reply_to:email,
         subject:'Portfolio enquiry from '+name.replace(/[\r\n]/g,' '),
         text:'Name: '+name+'\nEmail: '+email+'\nPhone: '+phone+'\n\nMessage:\n'+message
