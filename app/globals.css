@@ -840,3 +840,10 @@ body::after{display:none!important}
  }
  .mrs-name-loader-inner{max-width:calc(100vw - 48px)!important}
 }
+
+/* Position the decorative gold ring behind the hero H1, never over the text. */
+.hero.hero-portrait-blended .halo{z-index:1!important;pointer-events:none!important}
+.hero.hero-portrait-blended .hero-content{position:relative;z-index:4!important}
+@media(min-width:1100px){.hero.hero-portrait-blended .halo{left:13%!important;right:auto!important;top:18%!important}}
+@media(min-width:801px) and (max-width:1099px){.hero.hero-portrait-blended .halo{left:8%!important;right:auto!important;top:23%!important}}
+@media(max-width:800px){.hero.hero-portrait-blended .halo{left:2%!important;right:auto!important;top:19%!important;bottom:auto!important}}
