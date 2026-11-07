@@ -529,3 +529,7 @@ filter:none!important;
 @media(hover:hover){.hero .hero-socials a:hover{color:#08090b;background:#ffc900;border-color:#ffc900;transform:translateX(-4px)}}
 .hero .hero-socials a:focus-visible{outline:2px solid #ffc900;outline-offset:3px}
 @media(max-width:800px){.hero .hero-socials{top:auto;bottom:clamp(68px,12vh,120px);left:50%;right:auto;transform:translateX(-50%);flex-direction:row;gap:10px}.hero .hero-socials a{width:35px;height:35px}.hero .hero-socials a svg{width:17px;height:17px}}
+
+/* Avoid empty grey grid cell when the expertise list has an odd item count. */
+#expertise .skills-overlay .skill-accordion:last-child:nth-child(odd){grid-column:1 / -1!important}
+@media(max-width:800px){#expertise .skills-overlay .skill-accordion:last-child:nth-child(odd){grid-column:auto!important}}
