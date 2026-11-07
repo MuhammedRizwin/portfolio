@@ -634,3 +634,6 @@ html{scroll-behavior:smooth}
 
 /* Right-align contact form with the page's outer content edge. */
 @media(min-width:851px){#contact .contact-layout{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr)!important;gap:clamp(32px,5vw,85px)!important;width:100%!important}#contact .contact-layout .contact-form{justify-self:end!important;width:100%!important;max-width:720px!important;margin-right:0!important}}
+
+/* Center the contact headline and WhatsApp CTA vertically against the form. */
+@media(min-width:851px){#contact .contact-layout{align-items:center!important}#contact .contact-layout .contact-intro{align-self:center!important}}
