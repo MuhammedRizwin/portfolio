@@ -666,3 +666,30 @@ html{scroll-behavior:smooth}
 #contact .contact-form-note{color:#D2CEC3!important}
 #contact .contact-form-status.success{color:#FFC900!important}
 #contact .contact-form-status.error{color:#FFB8A7!important}
+
+/* Contact form text: ensure every typed and placeholder character follows MRS colours. */
+#contact .contact-form input,
+#contact .contact-form textarea{
+  color:#F5F3EF!important;
+  -webkit-text-fill-color:#F5F3EF!important;
+  caret-color:#FFC900!important;
+}
+#contact .contact-form input::placeholder,
+#contact .contact-form textarea::placeholder{
+  color:#C9C6BD!important;
+  -webkit-text-fill-color:#C9C6BD!important;
+  opacity:1!important;
+}
+#contact .contact-form input:focus,
+#contact .contact-form textarea:focus{
+  color:#F5F3EF!important;
+  -webkit-text-fill-color:#F5F3EF!important;
+}
+#contact .contact-form input:-webkit-autofill,
+#contact .contact-form input:-webkit-autofill:hover,
+#contact .contact-form input:-webkit-autofill:focus{
+  -webkit-text-fill-color:#F5F3EF!important;
+  -webkit-box-shadow:0 0 0 1000px #151515 inset!important;
+  box-shadow:0 0 0 1000px #151515 inset!important;
+  caret-color:#FFC900!important;
+}
