@@ -522,3 +522,10 @@ filter:none!important;
 @media(hover:hover){.about .inline-link:hover{color:#ffe36b!important;transform:translateY(-3px)!important;text-shadow:0 0 18px #ffc90055}.about .inline-link:hover svg{transform:translate(5px,-5px)!important}.about .inline-link:hover:after{transform:scaleX(1)!important}}
 .about .inline-link:focus-visible{outline:2px solid #ffc900;outline-offset:6px;border-radius:2px}
 @media(prefers-reduced-motion:reduce){.about .inline-link,.about .inline-link svg{transition:none!important}.about .inline-link:hover{transform:none!important}.about .inline-link:hover svg{transform:none!important}}
+
+/* Hero right-side social rail; compact horizontal layout on mobile. */
+.hero .hero-socials{position:absolute;right:clamp(12px,2.1vw,38px);top:50%;transform:translateY(-50%);z-index:12;display:flex;flex-direction:column;align-items:center;gap:13px}
+.hero .hero-socials a{display:grid;place-items:center;width:39px;height:39px;border:1px solid #ffffff38;border-radius:50%;color:#f5f3ef;background:#08090b88;backdrop-filter:blur(8px);transition:color .2s,background .2s,border-color .2s,transform .2s}
+@media(hover:hover){.hero .hero-socials a:hover{color:#08090b;background:#ffc900;border-color:#ffc900;transform:translateX(-4px)}}
+.hero .hero-socials a:focus-visible{outline:2px solid #ffc900;outline-offset:3px}
+@media(max-width:800px){.hero .hero-socials{top:auto;bottom:clamp(68px,12vh,120px);left:50%;right:auto;transform:translateX(-50%);flex-direction:row;gap:10px}.hero .hero-socials a{width:35px;height:35px}.hero .hero-socials a svg{width:17px;height:17px}}
