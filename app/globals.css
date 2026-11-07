@@ -903,3 +903,26 @@ body::after{display:none!important}
 @media(min-width:801px) and (max-width:1099px){
  .hero.hero-portrait-blended .portrait{width:53%!important;height:89%!important;right:-5%!important}
 }
+
+/* Repair ring compositing: one continuous ring beneath portrait and readable copy. */
+.hero.hero-portrait-blended{isolation:isolate}
+.hero.hero-portrait-blended .halo{
+ -webkit-mask-image:none!important;
+ mask-image:none!important;
+ clip-path:none!important;
+ z-index:1!important;
+ opacity:1!important;
+ pointer-events:none!important;
+}
+.hero.hero-portrait-blended .portrait{z-index:2!important}
+.hero.hero-portrait-blended .hero-shade{z-index:3!important;pointer-events:none!important}
+.hero.hero-portrait-blended .hero-content{z-index:5!important}
+@media(min-width:1100px){
+ .hero.hero-portrait-blended .halo{left:33%!important;right:auto!important;top:16%!important}
+}
+@media(min-width:801px) and (max-width:1099px){
+ .hero.hero-portrait-blended .halo{left:34%!important;right:auto!important}
+}
+@media(max-width:800px){
+ .hero.hero-portrait-blended .halo{left:20%!important;right:auto!important}
+}
