@@ -766,3 +766,18 @@ body::after{display:none!important}
 .mrs-name-loader-inner{position:relative;z-index:2;animation:mrsLoaderContentOut 2.25s ease both}
 .mrs-name-loader-inner::after{content:"";position:absolute;left:50%;top:-100vh;height:200vh;width:2px;background:linear-gradient(180deg,transparent,#FFC900,transparent);pointer-events:none;z-index:-1;animation:mrsLoaderGoldFlash 2.25s ease both}
 @media(prefers-reduced-motion:reduce){.mrs-name-loader,.mrs-name-loader::before,.mrs-name-loader::after,.mrs-name-loader-inner,.mrs-name-loader-inner::after{animation:none!important}.mrs-name-loader{display:none!important}}
+
+/* Handwritten signature typography for the name-only loader. */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+.mrs-name-loader-title,
+.mrs-name-loader-title em{
+  font-family:'Great Vibes','Brush Script MT',cursive!important;
+  font-style:normal!important;
+  font-weight:400!important;
+  letter-spacing:.005em!important;
+  line-height:1.4!important;
+}
+.mrs-name-loader-title{font-size:clamp(42px,7.2vw,105px)!important}
+.mrs-name-loader-title em{color:#FFC900!important}
+.mrs-name-loader-inner{gap:12px!important}
+@media(max-width:600px){.mrs-name-loader-title{font-size:clamp(40px,9.3vw,62px)!important;line-height:1.5!important}}
