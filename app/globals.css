@@ -540,3 +540,24 @@ filter:none!important;
 
 /* Rounded WhatsApp contact CTA, without changing other buttons. */
 #contact .btn.primary{border-radius:999px!important}
+
+/* Premium motion: lightweight, accessible, and compatible with the portrait transition. */
+html{scroll-behavior:smooth}
+.scroll-progress{position:fixed;left:0;top:0;width:0;height:3px;z-index:9999;background:linear-gradient(90deg,#ffc900,#ffe990);box-shadow:0 0 14px #ffc90088;pointer-events:none;transition:width .1s linear}
+.custom-cursor{position:fixed;left:0;top:0;width:20px;height:20px;margin:-10px 0 0 -10px;z-index:9998;border:1.5px solid #ffc900;border-radius:50%;background:#ffc90022;pointer-events:none;opacity:0;transform:translate3d(-100px,-100px,0);transition:opacity .18s ease,width .2s ease,height .2s ease,margin .2s ease,background .2s ease,box-shadow .2s ease;box-shadow:0 0 16px #ffc90033}
+.custom-cursor.cursor-visible{opacity:1}
+.custom-cursor.cursor-active{width:43px;height:43px;margin:-21.5px 0 0 -21.5px;background:#ffc90024;box-shadow:0 0 22px #ffc90055}
+@media(hover:none),(pointer:coarse){.custom-cursor{display:none!important}}
+@media(hover:hover) and (pointer:fine){.hero .actions .btn,.hero .hero-socials a,#contact .btn,.inline-link{transition-duration:.3s!important}}
+@media(prefers-reduced-motion:no-preference){
+ .section .section-top.reveal{transition:opacity .85s ease,transform .85s cubic-bezier(.2,.8,.2,1)!important}
+ .section .expertise-head.reveal,.about .about-intro.reveal,.about .copy.reveal,.contact .reveal{transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)!important}
+ .section .reveal:not(.visible){transform:translateY(26px)}
+ .section .reveal.visible{transform:translateY(0)}
+ #expertise .skill-accordion{animation:skill-appear .7s cubic-bezier(.2,.8,.2,1) both;animation-timeline:view();animation-range:entry 0% cover 22%}
+ #expertise .skill-accordion:nth-child(2n){animation-range:entry 0% cover 30%}
+ @keyframes skill-appear{from{opacity:.45;filter:blur(3px)}to{opacity:1;filter:blur(0)}}
+ .about .values>div{animation:value-appear .7s ease both;animation-timeline:view();animation-range:entry 0% cover 25%}
+ @keyframes value-appear{from{opacity:.5;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.custom-cursor{display:none!important}.scroll-progress{transition:none!important}#expertise .skill-accordion,.about .values>div{animation:none!important}}
